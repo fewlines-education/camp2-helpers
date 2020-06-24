@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "incremental": true,
+    "baseUrl": "./"
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}
