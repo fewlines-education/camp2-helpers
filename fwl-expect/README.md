@@ -1,11 +1,15 @@
-# Fewlines Readline
+# Fewlines Expect
 
-This package uses the [NodeJs Readline](https://nodejs.org/api/readline.html) and wrap it in a custom package in order to simplify its use and testing with jest mocks in Typescript.
+This package modifies the [expect](https://jestjs.io/docs/en/expect) and wrap it in a custom package in order to give an extra option to add a message when jest tests fails in Typescript.
+It modifies the package [jest-expect-message](https://www.npmjs.com/package/jest-expect-message) for custom use.
 
 ## Usage
 
-`fwl-readline` is not yet available on npm.
-To install it, add this in your `package.json` file:
+`fwl-expect` is not yet available on npm.
+
+(the rest is commented and will be used once the package has a more final form)
+
+<!-- To install it, add this in your `package.json` file:
 
 ### Installation
 
@@ -16,10 +20,10 @@ To install it, add this in your `package.json` file:
 ```
 
 ### Import
+
 ```js
 // example.js
 import * as readline from "fwl-readline";
-
 ```
 
 ### Create a reader
@@ -27,6 +31,7 @@ import * as readline from "fwl-readline";
 We decided to simplify the initial API of the readline package. For this reason, we only export the `createInterface` function.
 
 This function takes an `object` parameter with two keys:
+
 - `input`: generally the `process.stdin`
 - `output`: generally the `process.stdout`
 
@@ -58,6 +63,7 @@ rl.question("Enter something\n> ", (input) => {
 ```
 
 This example will output:
+
 ```bash
 Enter something
 > something
@@ -78,9 +84,9 @@ jest.mock("fwl-readline", () => {
   };
 });
 
-import functionThatUseFwlRealine from "wherever-you-want"
+import functionThatUseFwlRealine from "wherever-you-want";
 
 // [...]
 ```
 
-This way, the reader won't interfer when you start tests with `jest`.
+This way, the reader won't interfer when you start tests with `jest`. -->
