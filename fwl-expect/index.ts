@@ -1,3 +1,3 @@
 import withMessage from "./withMessage";
 
-global.expect = withMessage(global.expect);
+module.exports = withMessage(global.expect);
