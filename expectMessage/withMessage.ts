@@ -1,5 +1,3 @@
-import "jest/extend-expect";
-
 class JestAssertionError extends Error {
   matcherResult: any;
 
@@ -14,7 +12,7 @@ class JestAssertionError extends Error {
 }
 
 const wrapMatcher = (matcher: any, customMessage: string): any => {
-  const newMatcher = (...args: any[]) => {
+  const newMatcher = (...args: any[]): any => {
     try {
       return matcher(...args);
     } catch (error) {
@@ -27,7 +25,7 @@ const wrapMatcher = (matcher: any, customMessage: string): any => {
         throw new JestAssertionError(matcherResult, newMatcher);
       }
 
-      const message = () => customMessage + "\n\n" + matcherResult.message();
+      const message = (): string => customMessage + "\n\n" + matcherResult.message();
 
       throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
     }
@@ -51,19 +49,4 @@ const wrapMatchers = (matchers: any, customMessage: string): any => {
       [name]: wrapMatchers(matcher, customMessage), // recurse on .not/.resolves/.rejects
     };
   }, {});
-};
-
-export default (expect: any): any => {
-  // proxy the expect function
-  let expectProxy = Object.assign(
-    (actual: any, customMessage: string) => wrapMatchers(expect(actual), customMessage), // partially apply expect to get all matchers and chain them
-    expect, // clone additional properties on expect
-  );
-
-  expectProxy.extend = (o: any): any => {
-    expect.extend(o); // add new matchers to expect
-    expectProxy = Object.assign(expectProxy, expect); // clone new asymmetric matchers
-  };
-
-  return expectProxy;
 };
