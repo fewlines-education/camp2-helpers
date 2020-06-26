@@ -1,3 +1,5 @@
-import withMessage from "./withMessage";
+import expectMessage from "./matchers";
 
-module.exports = withMessage(global.expect);
+declare const expect: any;
+
+export default expectMessage(expect);

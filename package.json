@@ -1,26 +1,24 @@
 {
-  "name": "fwl-expect",
+  "name": "camp2-helpers",
   "version": "1.0.0",
-  "description": "This is a jest-expect-message moded version for Sparta Courses",
-  "main": "index.js",
-  "repository": "git@github.com:fewlines-education/fwl-expect.git",
+  "description": "",
+  "main": "expectMessage/expectMessage.js",
+  "repository": "git@github.com:fewlines-education/camp2-helpers.git",
   "author": "Fewlines",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "@types/jest": "^25.1.4",
-    "jest": "^25.1.0",
-    "ts-jest": "^25.2.1",
-    "ts-node": "^8.7.0",
-    "typescript": "^3.8.3"
-  },
   "devDependencies": {
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "prettier": "^2.0.5"
+    "jest": "^25.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
