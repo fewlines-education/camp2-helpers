@@ -5,26 +5,17 @@ It is based the package [jest-expect-message](https://www.npmjs.com/package/jest
 
 ## Usage
 
-`fwl-expect` is not yet available on npm.
-
-(the rest is commented and will be used once the package has a more final form)
-
 To install it, add this in your `package.json` file:
 
 ### Installation
 
 ```json
 "dependencies": {
-  "fwl-camp2-helpers": "fewlines-education/fwl-camp2-helpers#master"
+  "camp2-helpers": "fewlines-education/camp2-helpers#master"
 }
 ```
 
 ### Import
-
-```js
-// example.js
-import * as ch from "fwl-camp2-helpers";
-```
 
 ### Utility functions
 

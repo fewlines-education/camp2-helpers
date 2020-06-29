@@ -1,4 +1,4 @@
-interface TerminalCustomStyle {
+export interface TerminalCustomStyle {
   fg?: string;
   bg?: string;
   effects?: string;

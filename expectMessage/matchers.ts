@@ -1,4 +1,4 @@
-import { colorize } from "./utils/colorizeLog";
+import { colorize, TerminalCustomStyle } from "./utils/colorizeLog";
 
 class JestAssertionError extends Error {
   matcherResult: any;
@@ -11,12 +11,6 @@ class JestAssertionError extends Error {
       Error.captureStackTrace(this, callsite);
     }
   }
-}
-
-interface TerminalCustomStyle {
-  fg?: string;
-  bg?: string;
-  effects?: string;
 }
 
 const wrapMatcher = (matcher: any, customMessage: string, customStyle: TerminalCustomStyle = {}): any => {

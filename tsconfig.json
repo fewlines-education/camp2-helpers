@@ -12,10 +12,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "incremental": true,
-    "baseUrl": "./",
-    "paths": {
-      "@src/*": ["src/*"],
-    }
+    "baseUrl": "./"
   },
   "include": ["."],
   "exclude": ["node_modules", "dist"]
