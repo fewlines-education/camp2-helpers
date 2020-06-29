@@ -1,8 +1,8 @@
 {
   "name": "camp2-helpers",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "expectMessage/expectMessage.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:fewlines-education/camp2-helpers.git",
   "author": "Fewlines",
   "license": "MIT",
