@@ -134,20 +134,100 @@
         "signature": "0c9eb22b8106b7ca36eb27bf4fd4bd7b0f483900d29f84f1ad3a6c68f6c48e1f"
       },
       "../expectmessage/matchers.ts": {
-        "version": "85519dc9ba29b7b716a3a7e4dfb5b3773546453c26dd0852f3056adeed9f98d8",
+        "version": "d89a80b01dcb29f6288823376a1577522c10e04de2a0a2f2f879f0b4557a63b5",
         "signature": "91eb2806c691951507970c98092baf100e5d1c2a4aa760f3253c5675e29d8ac1"
       },
       "../expectmessage/expectmessage.ts": {
         "version": "162f27d53cbe50365623db894fb662df651e5b26940ab17d63902f5b7260e8a2",
         "signature": "46a0b34e1264c4d25ca6646ff0e6cfaa7275ea1ae5a6bc23d4dfd84edf2f2b2e"
       },
-      "../index.ts": {
-        "version": "fa5bfd5f298611e2835b87d371bac4beec6444669251c21548b92e2885ecd7fc",
-        "signature": "803e41815de5d316a517c2cbb9d6dbda35f987510bf0c72e6a14e5cede066341"
+      "../node_modules/ast-types/types.d.ts": {
+        "version": "cc2dc362fc50995684e9f7e9b38ad9bdf19e74919294a694cbc05392352cad7d",
+        "signature": "cc2dc362fc50995684e9f7e9b38ad9bdf19e74919294a694cbc05392352cad7d"
+      },
+      "../node_modules/ast-types/gen/namedtypes.d.ts": {
+        "version": "49fbe23940f0d7db2feb97083148b5dac0fa7c4758aa287cc4bef4c41a8aaa09",
+        "signature": "49fbe23940f0d7db2feb97083148b5dac0fa7c4758aa287cc4bef4c41a8aaa09"
+      },
+      "../node_modules/ast-types/gen/kinds.d.ts": {
+        "version": "ccceba622614a730e97144404d36f0029434c32f2f20ca5fa54db1a80572e27a",
+        "signature": "ccceba622614a730e97144404d36f0029434c32f2f20ca5fa54db1a80572e27a"
+      },
+      "../node_modules/ast-types/gen/builders.d.ts": {
+        "version": "15e339f53d6152a6cd4ab94c08cc8eb00ea182ed463e68f605e4d47857a9c81e",
+        "signature": "15e339f53d6152a6cd4ab94c08cc8eb00ea182ed463e68f605e4d47857a9c81e"
+      },
+      "../node_modules/ast-types/lib/types.d.ts": {
+        "version": "3377e74e01b2eafc76a55603279403157530db305a0b874bbb19731c961ac4cc",
+        "signature": "3377e74e01b2eafc76a55603279403157530db305a0b874bbb19731c961ac4cc"
+      },
+      "../node_modules/ast-types/lib/path.d.ts": {
+        "version": "8cd7362102d928e21b291a013f80fc68a038d4506d26ea9948c676e3fa1110d9",
+        "signature": "8cd7362102d928e21b291a013f80fc68a038d4506d26ea9948c676e3fa1110d9"
+      },
+      "../node_modules/ast-types/lib/scope.d.ts": {
+        "version": "90f6830fb380f4d2b69df018343ae80ce92991e85a0d7be8d214c643b39d1175",
+        "signature": "90f6830fb380f4d2b69df018343ae80ce92991e85a0d7be8d214c643b39d1175"
+      },
+      "../node_modules/ast-types/lib/node-path.d.ts": {
+        "version": "1bfe6db4f3dffacd1da82748cb8f0acec04e8a4d7bd36c09573d5d80a7dec28b",
+        "signature": "1bfe6db4f3dffacd1da82748cb8f0acec04e8a4d7bd36c09573d5d80a7dec28b"
+      },
+      "../node_modules/ast-types/lib/path-visitor.d.ts": {
+        "version": "6a8d6deca8ec4250630fea4e5f23bd9bf0face98739ccd22e08a17173117155b",
+        "signature": "6a8d6deca8ec4250630fea4e5f23bd9bf0face98739ccd22e08a17173117155b"
+      },
+      "../node_modules/ast-types/gen/visitor.d.ts": {
+        "version": "98732c34868cca894a0508da3d76a8668e2cfc38cb46142ae533076746dbc242",
+        "signature": "98732c34868cca894a0508da3d76a8668e2cfc38cb46142ae533076746dbc242"
+      },
+      "../node_modules/ast-types/main.d.ts": {
+        "version": "6c9708ae545db5f8deb8ef774d412fd1b46adade794664d7c6cfd0a1f6dfd64f",
+        "signature": "6c9708ae545db5f8deb8ef774d412fd1b46adade794664d7c6cfd0a1f6dfd64f"
+      },
+      "../node_modules/recast/lib/options.d.ts": {
+        "version": "aad8c703de79100c97d6d6d753e6c3e5c355d8024f7c80e0275b3973208b9dd3",
+        "signature": "aad8c703de79100c97d6d6d753e6c3e5c355d8024f7c80e0275b3973208b9dd3"
+      },
+      "../node_modules/recast/lib/parser.d.ts": {
+        "version": "e3a5287471fb08f053c06fd998632792aa5f022e45278f1e6dd55fb2fa9e7362",
+        "signature": "e3a5287471fb08f053c06fd998632792aa5f022e45278f1e6dd55fb2fa9e7362"
+      },
+      "../node_modules/recast/lib/printer.d.ts": {
+        "version": "28a6c8eeb48e165920067b9193555649fc43c2a28c450f23f622e5eb043d9463",
+        "signature": "28a6c8eeb48e165920067b9193555649fc43c2a28c450f23f622e5eb043d9463"
+      },
+      "../node_modules/recast/main.d.ts": {
+        "version": "1147c3efa5a256bcd6a3d2cfaf764185b7120bf985f8412d9bae596a0348f77b",
+        "signature": "1147c3efa5a256bcd6a3d2cfaf764185b7120bf985f8412d9bae596a0348f77b"
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
         "version": "98f705cf8a4c9e60aac4b159ba36a37291ed8f47aadaa0bfe6f073ff7dd77b25",
         "signature": "98f705cf8a4c9e60aac4b159ba36a37291ed8f47aadaa0bfe6f073ff7dd77b25"
+      },
+      "../node_modules/@babel/parser/typings/babel-parser.d.ts": {
+        "version": "98c2e3c00ed72daf568c0526ea4f4257f2c43dc5eaacd3d703c3b33f6df1ae86",
+        "signature": "98c2e3c00ed72daf568c0526ea4f4257f2c43dc5eaacd3d703c3b33f6df1ae86"
+      },
+      "../node_modules/recast/parsers/_babel_options.d.ts": {
+        "version": "5c673ef6148d60938c7a8f245b5a45ca20e7680ef17fd6065abad6b5a0545d0d",
+        "signature": "5c673ef6148d60938c7a8f245b5a45ca20e7680ef17fd6065abad6b5a0545d0d"
+      },
+      "../node_modules/recast/parsers/typescript.d.ts": {
+        "version": "45d9b99e9ce92bfb11323b4fa52fb00ff74dbd477e3646369d665652e0726539",
+        "signature": "45d9b99e9ce92bfb11323b4fa52fb00ff74dbd477e3646369d665652e0726539"
+      },
+      "../astnodeparser/astnodeparser.ts": {
+        "version": "c3815dac5ea2d0e2c54f08351577f0a68304958788cf713a33e1bbd7606a0889",
+        "signature": "a41d07624445cd94d7e62cbe4a2af69bcb4d09ad12d8880af5bef370b12128f1"
+      },
+      "../readcode/readcode.ts": {
+        "version": "2b15f48eebb1ba6e17650f6a3f4e6a25202269d44575ddd9180a1681684c8276",
+        "signature": "43323d83d2bd3cf4483e3df09853f8064471ab8f66a9f4601876ecec4f7f7777"
+      },
+      "../index.ts": {
+        "version": "62723a0e2c05a24efcdc48dd9585cf8e5171e22f2668b99910e51b1bf234b732",
+        "signature": "7713bb08dce9765357bb47f12cf2e8c931486b008bf1ab6a7b3a75c3c5e9234d"
       },
       "../node_modules/@types/babel__generator/index.d.ts": {
         "version": "b25c5f2970d06c729f464c0aeaa64b1a5b5f1355aa93554bb5f9c199b8624b1e",
@@ -156,10 +236,6 @@
       "../node_modules/@types/babel__traverse/index.d.ts": {
         "version": "cc0e8c69a59c7e4e15bd28e1eebe9a660c47c202e298cb20a93285368051193f",
         "signature": "cc0e8c69a59c7e4e15bd28e1eebe9a660c47c202e298cb20a93285368051193f"
-      },
-      "../node_modules/@babel/parser/typings/babel-parser.d.ts": {
-        "version": "98c2e3c00ed72daf568c0526ea4f4257f2c43dc5eaacd3d703c3b33f6df1ae86",
-        "signature": "98c2e3c00ed72daf568c0526ea4f4257f2c43dc5eaacd3d703c3b33f6df1ae86"
       },
       "../node_modules/@types/babel__template/index.d.ts": {
         "version": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8",
@@ -722,8 +798,142 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../index.ts": [
-        "../expectmessage/expectmessage.ts",
+      "../node_modules/ast-types/types.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/namedtypes.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/gen/kinds.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/kinds.d.ts": [
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/builders.d.ts": [
+        "../node_modules/ast-types/gen/kinds.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/types.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/gen/builders.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/path.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/scope.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/node-path.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/path.d.ts",
+        "../node_modules/ast-types/lib/scope.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/path-visitor.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/gen/visitor.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/visitor.d.ts": [
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/lib/path-visitor.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/main.d.ts": [
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/ast-types/gen/builders.d.ts",
+        "../node_modules/ast-types/gen/visitor.d.ts",
+        "../node_modules/ast-types/lib/path.d.ts",
+        "../node_modules/ast-types/lib/path-visitor.d.ts",
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/lib/options.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/lib/parser.d.ts": [
+        "../node_modules/recast/lib/options.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/lib/printer.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/main.d.ts": [
+        "../node_modules/ast-types/main.d.ts",
+        "../node_modules/recast/lib/parser.d.ts",
+        "../node_modules/recast/lib/options.d.ts",
+        "../node_modules/recast/lib/printer.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -731,6 +941,58 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@babel/types/lib/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/parsers/_babel_options.d.ts": [
+        "../node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/parsers/typescript.d.ts": [
+        "../node_modules/recast/parsers/_babel_options.d.ts",
+        "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../astnodeparser/astnodeparser.ts": [
+        "../node_modules/recast/main.d.ts",
+        "../node_modules/ast-types/main.d.ts",
+        "../node_modules/recast/parsers/typescript.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../readcode/readcode.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../index.ts": [
+        "../expectmessage/expectmessage.ts",
+        "../astnodeparser/astnodeparser.ts",
+        "../readcode/readcode.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -746,14 +1008,6 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@types/babel__traverse/index.d.ts": [
-        "../node_modules/@babel/types/lib/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -1627,7 +1881,154 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../index.ts": [
-        "../expectmessage/expectmessage.ts"
+        "../expectmessage/expectmessage.ts",
+        "../astnodeparser/astnodeparser.ts",
+        "../readcode/readcode.ts"
+      ],
+      "../node_modules/ast-types/types.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/lib/options.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/main.d.ts": [
+        "../node_modules/ast-types/main.d.ts",
+        "../node_modules/recast/lib/parser.d.ts",
+        "../node_modules/recast/lib/options.d.ts",
+        "../node_modules/recast/lib/printer.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../astnodeparser/astnodeparser.ts": [
+        "../node_modules/ast-types/main.d.ts"
+      ],
+      "../node_modules/recast/lib/parser.d.ts": [
+        "../node_modules/recast/lib/options.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/main.d.ts": [
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/ast-types/gen/builders.d.ts",
+        "../node_modules/ast-types/gen/visitor.d.ts",
+        "../node_modules/ast-types/lib/path.d.ts",
+        "../node_modules/ast-types/lib/path-visitor.d.ts",
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/path-visitor.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/gen/visitor.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/visitor.d.ts": [
+        "../node_modules/ast-types/lib/node-path.d.ts",
+        "../node_modules/ast-types/lib/path-visitor.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/node-path.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/lib/path.d.ts",
+        "../node_modules/ast-types/lib/scope.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/scope.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/path.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/lib/types.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/gen/builders.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/namedtypes.d.ts": [
+        "../node_modules/ast-types/types.d.ts",
+        "../node_modules/ast-types/lib/types.d.ts",
+        "../node_modules/ast-types/gen/kinds.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/builders.d.ts": [
+        "../node_modules/ast-types/gen/kinds.d.ts",
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/ast-types/gen/kinds.d.ts": [
+        "../node_modules/ast-types/gen/namedtypes.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/lib/printer.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/@babel/types/lib/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -1657,14 +2058,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
-        "../node_modules/@babel/types/lib/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@types/babel__traverse/index.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -1675,6 +2068,31 @@
       ],
       "../node_modules/@types/babel__generator/index.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/parsers/typescript.d.ts": [
+        "../node_modules/recast/parsers/_babel_options.d.ts",
+        "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "../node_modules/@babel/types/lib/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/recast/parsers/_babel_options.d.ts": [
+        "../node_modules/@babel/parser/typings/babel-parser.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -2304,11 +2722,30 @@
       "../expectmessage/utils/colorizelog.ts",
       "../expectmessage/matchers.ts",
       "../expectmessage/expectmessage.ts",
-      "../index.ts",
+      "../node_modules/ast-types/types.d.ts",
+      "../node_modules/ast-types/gen/namedtypes.d.ts",
+      "../node_modules/ast-types/gen/kinds.d.ts",
+      "../node_modules/ast-types/gen/builders.d.ts",
+      "../node_modules/ast-types/lib/types.d.ts",
+      "../node_modules/ast-types/lib/path.d.ts",
+      "../node_modules/ast-types/lib/scope.d.ts",
+      "../node_modules/ast-types/lib/node-path.d.ts",
+      "../node_modules/ast-types/lib/path-visitor.d.ts",
+      "../node_modules/ast-types/gen/visitor.d.ts",
+      "../node_modules/ast-types/main.d.ts",
+      "../node_modules/recast/lib/options.d.ts",
+      "../node_modules/recast/lib/parser.d.ts",
+      "../node_modules/recast/lib/printer.d.ts",
+      "../node_modules/recast/main.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
+      "../node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "../node_modules/recast/parsers/_babel_options.d.ts",
+      "../node_modules/recast/parsers/typescript.d.ts",
+      "../astnodeparser/astnodeparser.ts",
+      "../readcode/readcode.ts",
+      "../index.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
-      "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
       "../node_modules/@types/babel__core/index.d.ts",
       "../node_modules/@types/color-name/index.d.ts",

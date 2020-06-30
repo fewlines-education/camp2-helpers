@@ -1,2 +1,4 @@
 import expectMessage from "./expectMessage/expectMessage";
-export { expectMessage };
+import * as astNodeParser from "./astNodeParser/astNodeParser";
+import readCode from "./readCode/readCode";
+export { expectMessage, astNodeParser, readCode };
