@@ -21,6 +21,7 @@ const wrapMatcher = (matcher: any, customMessage: string, customStyle: TerminalC
       if (!error.matcherResult) {
         throw error;
       }
+
       const { matcherResult } = error;
 
       if (typeof customMessage !== "string") {
