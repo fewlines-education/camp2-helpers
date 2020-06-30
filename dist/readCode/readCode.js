@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
-function default_1(path) {
+function readCode(path) {
     return new Promise(function (resolve, reject) {
         fs_1.default.readFile(path, "utf8", function (err, text) {
             if (err) {
@@ -24,5 +24,5 @@ function default_1(path) {
         });
     });
 }
-exports.default = default_1;
+exports.readCode = readCode;
 //# sourceMappingURL=readCode.js.map

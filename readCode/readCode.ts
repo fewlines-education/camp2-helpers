@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export default function (path: string): any {
+export function readCode(path: string): any {
   return new Promise(function (resolve, reject) {
     fs.readFile(path, "utf8", function (err, text) {
       if (err) {

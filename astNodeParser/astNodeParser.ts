@@ -2,32 +2,6 @@ import { parse } from "recast";
 import { namedTypes } from "ast-types";
 import * as tsParser from "recast/parsers/typescript";
 
-/**
-  Usage example:
-
-  - Cast student file into string:
-  const studentCode = await readCode(
-    path.resolve(__dirname, "../src/index.ts")
-  );
-
-  - Pass the string to the parser, and get the node:
-  const treeClass = findNode(studentCode, "Tree");
-
-  - Search deeper into the node:
-  const isAlive = findNode(treeClass, "isAlive");
-
-  expect(isAlive).not.toBe(undefined);
-  expect(isAlive.abstract).toBe(true);
-  expect(isAlive.kind).toBe(NODE_KIND.METHOD);
-
-  You can search by name, class member name (e.g. "constructor").
-  
-  To prevent breaking the tests in case of searching something that is not in the ast,
-  the function returns "undefined".
-
-  This is a WIP, if you probably should investigate the ast if you can't find what you are looking for.
- */
-
 export enum NODE_TYPE {
   CLASS_DECLARATION = "ClassDeclaration",
   CLASS_PROPERTY = "ClassProperty",

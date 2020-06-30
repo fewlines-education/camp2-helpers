@@ -1,1 +1,1 @@
-export default function (path: string): any;
+export declare function readCode(path: string): any;
