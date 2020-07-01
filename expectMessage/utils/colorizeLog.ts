@@ -1,9 +1,10 @@
-export interface TerminalCustomStyle {
+interface ObjectTerminalCustomStyle {
   fg?: string;
   bg?: string;
   effects?: string;
 }
 
+export type TerminalCustomStyle = ObjectTerminalCustomStyle | string | number;
 interface Styles {
   [key: string]: {
     [key: string]: string;
@@ -46,12 +47,42 @@ const createStyle = (cat: any, styleName?: string): string => {
   return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
 
-export const colorize = (string: string, customStyle: TerminalCustomStyle = {}): string => {
+const createDefault = (
+  string: string,
+  fg: string,
+  bg: string,
+  effects = ""
+): string => {
   return [
-    createStyle("fg", customStyle.fg),
-    createStyle("bg", customStyle.bg),
-    createStyle("effects", customStyle.effects),
+    createStyle("fg", fg),
+    createStyle("bg", bg),
+    createStyle("effects", effects),
     string.toString().replace(/\s*$/, ""),
-    customStyle.fg || customStyle.bg || customStyle.effects ? createStyle("effects", "reset") : "",
+    fg || bg || effects ? createStyle("effects", "reset") : "",
   ].join("");
+};
+
+export const colorize = (
+  string: string,
+  customStyle: TerminalCustomStyle = {}
+): string => {
+  if (typeof customStyle === "string" || typeof customStyle === "number") {
+    if (customStyle === "code red" || customStyle === 3) {
+      return createDefault(string, "fefb67", "c91b00", "");
+    } else if (customStyle === "warning" || customStyle === 2) {
+      return createDefault(string, "fefb67", "", "");
+    } else {
+      return createDefault(string, "6871ff", "", "");
+    }
+  } else {
+    return [
+      createStyle("fg", customStyle.fg),
+      createStyle("bg", customStyle.bg),
+      createStyle("effects", customStyle.effects),
+      string.toString().replace(/\s*$/, ""),
+      customStyle.fg || customStyle.bg || customStyle.effects
+        ? createStyle("effects", "reset")
+        : "",
+    ].join("");
+  }
 };

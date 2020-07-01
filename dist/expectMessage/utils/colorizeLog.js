@@ -34,13 +34,37 @@ const styles = {
 const createStyle = (cat, styleName) => {
     return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
-exports.colorize = (string, customStyle = {}) => {
+const createDefault = (string, fg, bg, effects = "") => {
     return [
-        createStyle("fg", customStyle.fg),
-        createStyle("bg", customStyle.bg),
-        createStyle("effects", customStyle.effects),
+        createStyle("fg", fg),
+        createStyle("bg", bg),
+        createStyle("effects", effects),
         string.toString().replace(/\s*$/, ""),
-        customStyle.fg || customStyle.bg || customStyle.effects ? createStyle("effects", "reset") : "",
+        fg || bg || effects ? createStyle("effects", "reset") : "",
     ].join("");
+};
+exports.colorize = (string, customStyle = {}) => {
+    if (typeof customStyle === "string" || typeof customStyle === "number") {
+        if (customStyle === "code red" || customStyle === 3) {
+            return createDefault(string, "fefb67", "c91b00", "");
+        }
+        else if (customStyle === "warning" || customStyle === 2) {
+            return createDefault(string, "fefb67", "", "");
+        }
+        else {
+            return createDefault(string, "6871ff", "", "");
+        }
+    }
+    else {
+        return [
+            createStyle("fg", customStyle.fg),
+            createStyle("bg", customStyle.bg),
+            createStyle("effects", customStyle.effects),
+            string.toString().replace(/\s*$/, ""),
+            customStyle.fg || customStyle.bg || customStyle.effects
+                ? createStyle("effects", "reset")
+                : "",
+        ].join("");
+    }
 };
 //# sourceMappingURL=colorizeLog.js.map

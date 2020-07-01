@@ -1,11 +1,6 @@
 # Camp2 Helpers
 
-This package modifies the jest [expect](https://jestjs.io/docs/en/expect) function and wrap it in a custom package in order to give an extra option to add a message when jest tests fails in Typescript.
-It is based the package [jest-expect-message](https://www.npmjs.com/package/jest-expect-message) for custom use.
-
-## Usage
-
-### Installation
+## Installation
 
 To install it, add this in your `package.json` file:
 
@@ -15,19 +10,32 @@ To install it, add this in your `package.json` file:
 }
 ```
 
-### Import
+## Import
 
-### Utility functions
+To import the whole package, you can import it from the top of your file:
 
-#### readline
+```js
+import camp2_helpers from "camp2-helpers";
+```
 
-#### nodeParser
+## Utility functions
 
-#### expectMessage
+### expectMessage
 
-### Type
+This package modifies the jest [expect](https://jestjs.io/docs/en/expect) function and wrap it in a custom package in order to give an extra option to add a message when jest tests fails in Typescript.
+It is based the package [jest-expect-message](https://www.npmjs.com/package/jest-expect-message) for custom use.
 
-### Use the created reader
+you need to install `jest`
+
+#### example
+
+### readCode
+
+### nodeParser
+
+## Type
+
+## Use the created reader
 
 usage ast parser => /\*\*
 Usage example:
