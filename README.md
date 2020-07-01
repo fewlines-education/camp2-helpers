@@ -29,14 +29,39 @@ You need to install `jest` for `expect` to be a global variable.
 
 #### Utilities
 
-the function `expectMessage(value, message, [style])` takes three arguments
+The function `expectMessage(value, message, [style])` takes three arguments
 
-- expected
+- `value` is the value tested against a matcher. It is the same argument referenced in the [Jest documentation](https://jestjs.io/docs/en/expect#expectvalue).
+- `message` is a **string** that is printed only if the expect fails.
+- `style` is either:
+  - an **object** composed of three strings changing respectively the _foreground color_, _background color_ and _effect_ of the message printed.
+  - `1`, `2`, or `3`. Each integer correspond to a level of visibility for the message, from the lowest to the most visible color schema.
+
+#### Example
 
 ```js
-expectMessage()
+test("simple test", () => {
+  expectMessage(1 + 1, "This is a level 3 message", 3).toBe(11);
+});
 
-#### example
+// This test will fail and print "This is a level 3 message"
+// in yellow with a red background.
+```
+
+#### Documentation
+
+Those are the different arguments you can give to the `style` parameter:
+
+| foreground | background | effect     |
+| ---------- | ---------- | ---------- |
+| black      | black      | reset      |
+| red        | red        | bright     |
+| green      | green      | dim        |
+| yellow     | yellow     | underscore |
+| blue       | blue       | blink      |
+| magenta    | magent     | reverse    |
+| cyan       | cyan       | hidden     |
+| white      | white      |            |
 
 ### readCode
 
@@ -71,4 +96,7 @@ the function returns "undefined".
 
 This is a WIP, if you probably should investigate the ast if you can't find what you are looking for.
 \*/
+
+```
+
 ```
