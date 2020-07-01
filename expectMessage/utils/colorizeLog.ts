@@ -68,11 +68,11 @@ export const colorize = (
 ): string => {
   if (typeof customStyle === "string" || typeof customStyle === "number") {
     if (customStyle === "code red" || customStyle === 3) {
-      return createDefault(string, "fefb67", "c91b00", "");
+      return createDefault(string, "yellow", "red", "");
     } else if (customStyle === "warning" || customStyle === 2) {
-      return createDefault(string, "fefb67", "", "");
+      return createDefault(string, "red", "", "");
     } else {
-      return createDefault(string, "6871ff", "", "");
+      return createDefault(string, "cyan", "", "");
     }
   } else {
     return [
