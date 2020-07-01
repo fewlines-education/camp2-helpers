@@ -226,8 +226,8 @@
         "signature": "a41d07624445cd94d7e62cbe4a2af69bcb4d09ad12d8880af5bef370b12128f1"
       },
       "../index.ts": {
-        "version": "3a5291b79a2b2f42fe9806685b7a5372a12cfe33010afc0ba8224601427a5f6a",
-        "signature": "46f0a1d4fd7e95fec03b8402f37f49913140d6a588b98e09e8ae7cd5938196ea"
+        "version": "d0ee2625e413fe5b506dd97a816fbe65f1fbf5c602d7bf5c9be02cd6295d4046",
+        "signature": "8fb1e3c0167efad273205a0a49d240360e63d2929ad272c74bf6e18da20874ee"
       },
       "../node_modules/@types/babel__generator/index.d.ts": {
         "version": "b25c5f2970d06c729f464c0aeaa64b1a5b5f1355aa93554bb5f9c199b8624b1e",
@@ -2751,6 +2751,7 @@
       "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2020.bigint.d.ts",
       "../../../../usr/local/lib/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.full.d.ts",
+      "../expectmessage/utils/colorizelog.ts",
       "../expectmessage/matchers.ts",
       "../expectmessage/expectmessage.ts",
       "../readcode/readcode.ts",
@@ -2774,7 +2775,6 @@
       "../node_modules/recast/parsers/_babel_options.d.ts",
       "../node_modules/recast/parsers/typescript.d.ts",
       "../astnodeparser/astnodeparser.ts",
-      "../index.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
@@ -2851,7 +2851,7 @@
       "../node_modules/@types/stack-utils/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../expectmessage/utils/colorizelog.ts"
+      "../index.ts"
     ]
   },
   "version": "3.8.3"
