@@ -130,7 +130,7 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "../expectmessage/utils/colorizelog.ts": {
-        "version": "446ad502719b15549bef55bee98e46a4a65515905a2e06f2749f6f087d1d5870",
+        "version": "5f6fe4789cc38339f6bdb46b8a006c645a81e95826deffb8129d83acf6d74c2c",
         "signature": "e3e16e3a2d0a8f8068710999a7347a01e035c4a1a070665a07eb3059c3672618"
       },
       "../expectmessage/matchers.ts": {

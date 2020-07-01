@@ -46,7 +46,7 @@ const createDefault = (string, fg, bg, effects = "") => {
 exports.colorize = (string, customStyle = {}) => {
     if (typeof customStyle === "string" || typeof customStyle === "number") {
         if (customStyle === "code red" || customStyle === 3) {
-            return createDefault(string, "yellow", "red", "");
+            return createDefault(string, "yellow", "red", "blink");
         }
         else if (customStyle === "warning" || customStyle === 2) {
             return createDefault(string, "red", "", "");
