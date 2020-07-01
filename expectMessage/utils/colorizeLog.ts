@@ -70,9 +70,9 @@ export const colorize = (
     if (customStyle === "code red" || customStyle === 3) {
       return createDefault(string, "yellow", "red", "blink");
     } else if (customStyle === "warning" || customStyle === 2) {
-      return createDefault(string, "red", "", "");
+      return createDefault(string, "red", "", "underscore");
     } else {
-      return createDefault(string, "cyan", "", "dim");
+      return createDefault(string, "cyan", "", "");
     }
   } else {
     return [
