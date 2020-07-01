@@ -52,7 +52,7 @@ exports.colorize = (string, customStyle = {}) => {
             return createDefault(string, "red", "", "");
         }
         else {
-            return createDefault(string, "cyan", "", "");
+            return createDefault(string, "cyan", "", "dim");
         }
     }
     else {

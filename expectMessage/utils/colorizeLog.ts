@@ -72,7 +72,7 @@ export const colorize = (
     } else if (customStyle === "warning" || customStyle === 2) {
       return createDefault(string, "red", "", "");
     } else {
-      return createDefault(string, "cyan", "", "");
+      return createDefault(string, "cyan", "", "dim");
     }
   } else {
     return [
