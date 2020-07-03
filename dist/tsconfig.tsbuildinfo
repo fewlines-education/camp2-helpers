@@ -234,8 +234,8 @@
         "signature": "4342d77de385c92acc96eab1ac0bdf7c47199aea56659d8d6dd1f98d4db4bb53"
       },
       "../index.ts": {
-        "version": "b0c4ba956371731e3b8cc8f9629f21063d0af7b44c950bc08aa987c57dbf148e",
-        "signature": "954c2d81221964524fe0d6adb5f15ae3bfa27dacc05063e6df327a5a5868de18"
+        "version": "a94735604ed7d4173faf943a61d102684ac041176c83c00e199d3f2731779ea0",
+        "signature": "5a45f1e8aeb99190afe1c8e43a561fb997593eb8e59d31cbdd5abf3f016620bd"
       },
       "../node_modules/@types/babel__generator/index.d.ts": {
         "version": "b25c5f2970d06c729f464c0aeaa64b1a5b5f1355aa93554bb5f9c199b8624b1e",
@@ -1018,6 +1018,7 @@
         "../expectmessage/expectmessage.ts",
         "../readcode/readcode.ts",
         "../astnodeparser/astnodeparser.ts",
+        "../astnodeparser/astnodeparser.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -2089,10 +2090,22 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../astnodeparser/astnodeparser.d.ts": [
+        "../node_modules/ast-types/main.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../astnodeparser/astnodeparser.ts": [
+        "../astnodeparser/astnodeparser.d.ts"
+      ],
       "../index.ts": [
         "../expectmessage/expectmessage.ts",
         "../readcode/readcode.ts",
-        "../astnodeparser/astnodeparser.ts"
+        "../astnodeparser/astnodeparser.ts",
+        "../astnodeparser/astnodeparser.d.ts"
       ],
       "../node_modules/@types/babel__generator/index.d.ts": [
         "../node_modules/@babel/types/lib/index.d.ts",
@@ -2748,17 +2761,6 @@
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../astnodeparser/astnodeparser.d.ts": [
-        "../node_modules/ast-types/main.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../astnodeparser/astnodeparser.ts": [
-        "../astnodeparser/astnodeparser.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2818,6 +2820,8 @@
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/recast/parsers/_babel_options.d.ts",
       "../node_modules/recast/parsers/typescript.d.ts",
+      "../astnodeparser/astnodeparser.d.ts",
+      "../astnodeparser/astnodeparser.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
@@ -2894,8 +2898,6 @@
       "../node_modules/@types/stack-utils/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../astnodeparser/astnodeparser.d.ts",
-      "../astnodeparser/astnodeparser.ts",
       "../index.ts"
     ]
   },

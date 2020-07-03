@@ -10,4 +10,5 @@ const expectMessage_1 = __importDefault(require("./expectMessage/expectMessage")
 exports.expectMessage = expectMessage_1.default;
 __export(require("./readCode/readCode"));
 __export(require("./astNodeParser/astNodeParser"));
+__export(require("./astNodeParser/astNodeParser.d"));
 //# sourceMappingURL=index.js.map
