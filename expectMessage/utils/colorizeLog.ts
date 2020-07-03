@@ -1,4 +1,4 @@
-import { TerminalCustomStyle, Styles } from "./colorizeLog.d";
+import { TerminalCustomStyle, Styles } from "./colorizeLog.types";
 
 const styles: Styles = {
   effects: {

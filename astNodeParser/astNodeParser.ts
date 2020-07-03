@@ -1,6 +1,6 @@
 import { parse } from "recast";
 import * as tsParser from "recast/parsers/typescript";
-import { Node } from "./astNodeParser.d";
+import { Node } from "./astNodeParser.types";
 
 export function findNode(code: string | Node, name: string): Node | undefined {
   if (typeof code === "string") {
