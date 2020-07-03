@@ -1,15 +1,4 @@
-interface ObjectTerminalCustomStyle {
-  fg?: string;
-  bg?: string;
-  effects?: string;
-}
-
-export type TerminalCustomStyle = ObjectTerminalCustomStyle | string | number;
-interface Styles {
-  [key: string]: {
-    [key: string]: string;
-  };
-}
+import { TerminalCustomStyle, Styles } from "./colorizeLog.d";
 
 const styles: Styles = {
   effects: {
@@ -49,8 +38,8 @@ const createStyle = (cat: any, styleName?: string): string => {
 
 const createDefault = (
   string: string,
-  fg: string,
-  bg: string,
+  fg = "",
+  bg = "",
   effects = ""
 ): string => {
   return [
@@ -67,12 +56,14 @@ export const colorize = (
   customStyle: TerminalCustomStyle = {}
 ): string => {
   if (typeof customStyle === "string" || typeof customStyle === "number") {
-    if (customStyle === "code red" || customStyle === 3) {
+    if (customStyle === "error" || customStyle === 3) {
       return createDefault(string, "yellow", "red", "blink");
     } else if (customStyle === "warning" || customStyle === 2) {
       return createDefault(string, "red", "", "underscore");
+    } else if (customStyle === "log" || customStyle === 1) {
+      return createDefault(string, "cyan");
     } else {
-      return createDefault(string, "cyan", "", "");
+      return createDefault(string);
     }
   } else {
     return [

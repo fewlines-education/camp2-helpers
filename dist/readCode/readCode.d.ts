@@ -1,1 +1,1 @@
-export declare function readCode(path: string): any;
+export declare function readCode(path: string): Promise<string>;

@@ -8,7 +8,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const expectMessage_1 = __importDefault(require("./expectMessage/expectMessage"));
 exports.expectMessage = expectMessage_1.default;
-const readCode_1 = require("./readCode/readCode");
-exports.readCode = readCode_1.readCode;
+__export(require("./readCode/readCode"));
 __export(require("./astNodeParser/astNodeParser"));
 //# sourceMappingURL=index.js.map

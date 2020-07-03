@@ -54,6 +54,7 @@
       "@typescript-eslint/no-explicit-any": 0
     }
   },
+  "allowJs": true,
   "jest": {
     "preset": "ts-jest",
     "globals": {

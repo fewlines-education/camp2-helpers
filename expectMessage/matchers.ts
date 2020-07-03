@@ -1,4 +1,5 @@
-import { colorize, TerminalCustomStyle } from "./utils/colorizeLog";
+import { TerminalCustomStyle } from "./utils/colorizeLog.d";
+import { colorize } from "./utils/colorizeLog";
 
 class JestAssertionError extends Error {
   matcherResult: any;

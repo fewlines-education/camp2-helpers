@@ -34,7 +34,7 @@ const styles = {
 const createStyle = (cat, styleName) => {
     return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
-const createDefault = (string, fg, bg, effects = "") => {
+const createDefault = (string, fg = "", bg = "", effects = "") => {
     return [
         createStyle("fg", fg),
         createStyle("bg", bg),
@@ -45,14 +45,17 @@ const createDefault = (string, fg, bg, effects = "") => {
 };
 exports.colorize = (string, customStyle = {}) => {
     if (typeof customStyle === "string" || typeof customStyle === "number") {
-        if (customStyle === "code red" || customStyle === 3) {
+        if (customStyle === "error" || customStyle === 3) {
             return createDefault(string, "yellow", "red", "blink");
         }
         else if (customStyle === "warning" || customStyle === 2) {
             return createDefault(string, "red", "", "underscore");
         }
+        else if (customStyle === "log" || customStyle === 1) {
+            return createDefault(string, "cyan");
+        }
         else {
-            return createDefault(string, "cyan", "", "");
+            return createDefault(string);
         }
     }
     else {

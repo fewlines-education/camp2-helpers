@@ -9,28 +9,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const recast_1 = require("recast");
 const tsParser = __importStar(require("recast/parsers/typescript"));
-var NODE_TYPE;
-(function (NODE_TYPE) {
-    NODE_TYPE["CLASS_DECLARATION"] = "ClassDeclaration";
-    NODE_TYPE["CLASS_PROPERTY"] = "ClassProperty";
-    NODE_TYPE["CLASS_METHOD"] = "ClassMethod";
-    NODE_TYPE["VARIABLE_DECLARATION"] = "VariableDeclaration";
-    NODE_TYPE["EXPORT_NAMED_DECLARATION"] = "ExportNamedDeclaration";
-})(NODE_TYPE = exports.NODE_TYPE || (exports.NODE_TYPE = {}));
-var NODE_KIND;
-(function (NODE_KIND) {
-    NODE_KIND["METHOD"] = "method";
-    NODE_KIND["CONSTRUCTOR"] = "constructor";
-})(NODE_KIND = exports.NODE_KIND || (exports.NODE_KIND = {}));
-var ACCESSIBILITY;
-(function (ACCESSIBILITY) {
-    ACCESSIBILITY["PUBLIC"] = "public";
-    ACCESSIBILITY["PRIVATE"] = "private";
-    ACCESSIBILITY["PROTECTED"] = "protected";
-})(ACCESSIBILITY = exports.ACCESSIBILITY || (exports.ACCESSIBILITY = {}));
-function findNode(studentCode, name) {
-    if (typeof studentCode === "string") {
-        const ast = recast_1.parse(studentCode, {
+function findNode(code, name) {
+    if (typeof code === "string") {
+        const ast = recast_1.parse(code, {
             parser: tsParser,
         });
         return ast.program.body.find((node) => {
@@ -43,8 +24,8 @@ function findNode(studentCode, name) {
             return node.id.name === name;
         });
     }
-    if (studentCode.body) {
-        return studentCode.body.body.find((node) => {
+    if (code.body) {
+        return code.body.body.find((node) => {
             return node.key.name === name;
         });
     }
