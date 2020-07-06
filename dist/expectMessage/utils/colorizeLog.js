@@ -1,11 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const levels = {
-    level: {
-        error: { fg: "yellow", bg: "red", effects: "blink" },
-        warning: { fg: "red", effects: "underscore" },
-        log: { fg: "cyan" },
-    },
+    error: { fg: "yellow", bg: "red", effects: "blink" },
+    warning: { fg: "red", effects: "underscore" },
+    log: { fg: "cyan" },
 };
 const styles = {
     effects: {
@@ -42,7 +40,7 @@ const createStyle = (cat, styleName) => {
     return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
 const createLevelStyle = (cat) => {
-    return levels[cat];
+    return levels[cat] ? levels[cat] : levels.log;
 };
 function createCompleteStyle(string, specs) {
     return [
@@ -57,8 +55,7 @@ function createCompleteStyle(string, specs) {
 }
 exports.colorize = (string, customStyle = {}) => {
     if (typeof customStyle === "string") {
-        const levelStyle = createLevelStyle(customStyle);
-        return createCompleteStyle(string, levelStyle);
+        return createCompleteStyle(string, createLevelStyle(customStyle));
     }
     else {
         return createCompleteStyle(string, customStyle);

@@ -10,7 +10,5 @@ export interface Styles {
     };
 }
 export interface Levels {
-    [key: string]: {
-        [key: string]: ObjectTerminalCustomStyle;
-    };
+    [key: string]: ObjectTerminalCustomStyle;
 }

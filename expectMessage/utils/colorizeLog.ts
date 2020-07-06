@@ -6,11 +6,9 @@ import {
 } from "./colorizeLog.types";
 
 const levels: Levels = {
-  level: {
-    error: { fg: "yellow", bg: "red", effects: "blink" },
-    warning: { fg: "red", effects: "underscore" },
-    log: { fg: "cyan" },
-  },
+  error: { fg: "yellow", bg: "red", effects: "blink" },
+  warning: { fg: "red", effects: "underscore" },
+  log: { fg: "cyan" },
 };
 
 const styles: Styles = {
@@ -50,7 +48,7 @@ const createStyle = (cat: string, styleName?: string): string => {
 };
 
 const createLevelStyle = (cat: string): any => {
-  return levels[cat];
+  return levels[cat] ? levels[cat] : levels.log;
 };
 
 function createCompleteStyle(
@@ -73,18 +71,8 @@ export const colorize = (
   customStyle: TerminalCustomStyle = {}
 ): string => {
   if (typeof customStyle === "string") {
-    const levelStyle = createLevelStyle(customStyle);
-    return createCompleteStyle(string, levelStyle);
+    return createCompleteStyle(string, createLevelStyle(customStyle));
   } else {
     return createCompleteStyle(string, customStyle);
-    // return [
-    //   createStyle("fg", customStyle.fg),
-    //   createStyle("bg", customStyle.bg),
-    //   createStyle("effects", customStyle.effects),
-    //   string.toString().replace(/\s*$/, ""),
-    //   customStyle.fg || customStyle.bg || customStyle.effects
-    //     ? createStyle("effects", "reset")
-    //     : "",
-    // ].join("");
   }
 };

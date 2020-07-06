@@ -130,11 +130,11 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "../expectmessage/utils/colorizelog.types.ts": {
-        "version": "05a38f01190e2e4cc6ec0fb86152811dffea85ce6ab79275a13983ee611f69c8",
-        "signature": "02b7418482478651c3b8f008f6d58f93ef45c6b996c8a522f7c16675c7357064"
+        "version": "278f5b9e450a9c2e74510a02a1ffc70430cd03f26cb84b619d26e0d3a99e22b4",
+        "signature": "c52c486d27abea23d7974622fa74b92e473e703f2d01994fe3f9fbf70d5694c3"
       },
       "../expectmessage/utils/colorizelog.ts": {
-        "version": "9d6664587f018c6bfb2a1d48334e4039e75f1ec14f9c3305ab454780d8abe8a8",
+        "version": "6b9a4281c80d05108a1c4237498542862edf95e213ba6a7d728b722620f0c573",
         "signature": "8a13ad2c73e4c4924db876ee4a5cf52898f14c211b2e1ac3508675005fad85d3"
       },
       "../expectmessage/matchers.ts": {
