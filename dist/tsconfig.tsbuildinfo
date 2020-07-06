@@ -134,11 +134,11 @@
         "signature": "c52c486d27abea23d7974622fa74b92e473e703f2d01994fe3f9fbf70d5694c3"
       },
       "../expectmessage/utils/colorizelog.ts": {
-        "version": "8cb03f54fa7a793067418b686282a6f20758ea77ad75a1eb80825139f9ed8fa3",
-        "signature": "725c2f29a159287b4df68190c4e7bcd044d25225b723bc4c96dec47222fecc86"
+        "version": "ec8470b8fe608d132fd7bd3611c26f77f6e9c12122f7fbab4f0873d7e62b0c4c",
+        "signature": "1e94104f84d26d33f28af3b368e05ad5c05cfb0cbfd15b9f96f33f556b3b648e"
       },
       "../expectmessage/matchers.ts": {
-        "version": "64f6f228151c42b3cf7b51bd7a10e7d351ee26b771a6be7df8dbfec2a2371159",
+        "version": "979df7042f860ae9743205668ae24a8ef8c6bcd562d1fbab8604149bc3d452fb",
         "signature": "91eb2806c691951507970c98092baf100e5d1c2a4aa760f3253c5675e29d8ac1"
       },
       "../expectmessage/expectmessage.ts": {
@@ -2786,6 +2786,7 @@
       "../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.full.d.ts",
       "../expectmessage/utils/colorizelog.types.ts",
       "../expectmessage/expectmessage.ts",
+      "../readcode/readcode.ts",
       "../node_modules/ast-types/types.d.ts",
       "../node_modules/ast-types/gen/namedtypes.d.ts",
       "../node_modules/ast-types/gen/kinds.d.ts",
@@ -2885,8 +2886,7 @@
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
       "../expectmessage/utils/colorizelog.ts",
-      "../expectmessage/matchers.ts",
-      "../readcode/readcode.ts"
+      "../expectmessage/matchers.ts"
     ]
   },
   "version": "3.8.3"

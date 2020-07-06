@@ -24,7 +24,7 @@ const wrapMatcher = (matcher, customMessage, customStyle = {}) => {
                 throw new JestAssertionError(matcherResult, newMatcher);
             }
             if (typeof customStyle === "string") {
-                const message = () => colorizeLog_1.customColorize(customMessage, customStyle) +
+                const message = () => colorizeLog_1.defaultColorize(customMessage, customStyle) +
                     "\n\n" +
                     matcherResult.message();
                 throw new JestAssertionError(Object.assign(Object.assign({}, matcherResult), { message }), newMatcher);

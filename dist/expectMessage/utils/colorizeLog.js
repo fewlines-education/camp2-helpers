@@ -56,7 +56,7 @@ function createCompleteStyle(string, specs) {
 exports.colorize = (string, customStyle = {}) => {
     return createCompleteStyle(string, customStyle);
 };
-exports.customColorize = (string, customStyle) => {
+exports.defaultColorize = (string, customStyle) => {
     return createCompleteStyle(string, createLevelStyle(customStyle));
 };
 //# sourceMappingURL=colorizeLog.js.map

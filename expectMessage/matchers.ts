@@ -1,5 +1,5 @@
 import { TerminalCustomStyle } from "./utils/colorizeLog.types";
-import { colorize, customColorize } from "./utils/colorizeLog";
+import { colorize, defaultColorize } from "./utils/colorizeLog";
 
 class JestAssertionError extends Error {
   matcherResult: any;
@@ -34,7 +34,7 @@ const wrapMatcher = (
       }
       if (typeof customStyle === "string") {
         const message = (): string =>
-          customColorize(customMessage, customStyle) +
+          defaultColorize(customMessage, customStyle) +
           "\n\n" +
           matcherResult.message();
 

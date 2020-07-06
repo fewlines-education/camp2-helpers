@@ -68,6 +68,9 @@ export const colorize = (
   return createCompleteStyle(string, customStyle);
 };
 
-export const customColorize = (string: string, customStyle: string): string => {
+export const defaultColorize = (
+  string: string,
+  customStyle: string
+): string => {
   return createCompleteStyle(string, createLevelStyle(customStyle));
 };
