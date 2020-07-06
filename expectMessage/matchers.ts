@@ -35,7 +35,7 @@ const wrapMatcher = (
         throw new JestAssertionError(matcherResult, newMatcher);
       }
 
-      const message = (): any =>
+      const message = (): string =>
         colorize(customMessage, customStyle) + "\n\n" + matcherResult.message();
 
       throw new JestAssertionError({ ...matcherResult, message }, newMatcher);

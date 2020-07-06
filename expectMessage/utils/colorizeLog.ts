@@ -1,4 +1,17 @@
-import { TerminalCustomStyle, Styles } from "./colorizeLog.types";
+import {
+  ObjectTerminalCustomStyle,
+  TerminalCustomStyle,
+  Styles,
+  Levels,
+} from "./colorizeLog.types";
+
+const levels: Levels = {
+  level: {
+    error: { fg: "yellow", bg: "red", effects: "blink" },
+    warning: { fg: "red", effects: "underscore" },
+    log: { fg: "cyan" },
+  },
+};
 
 const styles: Styles = {
   effects: {
@@ -32,48 +45,46 @@ const styles: Styles = {
   },
 };
 
-const createStyle = (cat: any, styleName?: string): string => {
+const createStyle = (cat: string, styleName?: string): string => {
   return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
 
-const createDefault = (
-  string: string,
-  fg = "",
-  bg = "",
-  effects = ""
-): string => {
-  return [
-    createStyle("fg", fg),
-    createStyle("bg", bg),
-    createStyle("effects", effects),
-    string.toString().replace(/\s*$/, ""),
-    fg || bg || effects ? createStyle("effects", "reset") : "",
-  ].join("");
+const createLevelStyle = (cat: string): any => {
+  return levels[cat];
 };
+
+function createCompleteStyle(
+  string: string,
+  specs: ObjectTerminalCustomStyle
+): string {
+  return [
+    createStyle("fg", specs.fg),
+    createStyle("bg", specs.bg),
+    createStyle("effects", specs.effects),
+    string.toString().replace(/\s*$/, ""),
+    specs.fg || specs.bg || specs.effects
+      ? createStyle("effects", "reset")
+      : "",
+  ].join("");
+}
 
 export const colorize = (
   string: string,
   customStyle: TerminalCustomStyle = {}
 ): string => {
-  if (typeof customStyle === "string" || typeof customStyle === "number") {
-    if (customStyle === "error" || customStyle === 3) {
-      return createDefault(string, "yellow", "red", "blink");
-    } else if (customStyle === "warning" || customStyle === 2) {
-      return createDefault(string, "red", "", "underscore");
-    } else if (customStyle === "log" || customStyle === 1) {
-      return createDefault(string, "cyan");
-    } else {
-      return createDefault(string);
-    }
+  if (typeof customStyle === "string") {
+    const levelStyle = createLevelStyle(customStyle);
+    return createCompleteStyle(string, levelStyle);
   } else {
-    return [
-      createStyle("fg", customStyle.fg),
-      createStyle("bg", customStyle.bg),
-      createStyle("effects", customStyle.effects),
-      string.toString().replace(/\s*$/, ""),
-      customStyle.fg || customStyle.bg || customStyle.effects
-        ? createStyle("effects", "reset")
-        : "",
-    ].join("");
+    return createCompleteStyle(string, customStyle);
+    // return [
+    //   createStyle("fg", customStyle.fg),
+    //   createStyle("bg", customStyle.bg),
+    //   createStyle("effects", customStyle.effects),
+    //   string.toString().replace(/\s*$/, ""),
+    //   customStyle.fg || customStyle.bg || customStyle.effects
+    //     ? createStyle("effects", "reset")
+    //     : "",
+    // ].join("");
   }
 };
