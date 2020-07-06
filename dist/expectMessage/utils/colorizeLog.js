@@ -1,5 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const levels = {
+    level: {
+        error: { fg: "yellow", bg: "red", effects: "blink" },
+        warning: { fg: "red", effects: "underscore" },
+        log: { fg: "cyan" },
+    },
+};
 const styles = {
     effects: {
         reset: "0",
@@ -34,40 +41,27 @@ const styles = {
 const createStyle = (cat, styleName) => {
     return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
-const createDefault = (string, fg = "", bg = "", effects = "") => {
-    return [
-        createStyle("fg", fg),
-        createStyle("bg", bg),
-        createStyle("effects", effects),
-        string.toString().replace(/\s*$/, ""),
-        fg || bg || effects ? createStyle("effects", "reset") : "",
-    ].join("");
+const createLevelStyle = (cat) => {
+    return levels[cat];
 };
+function createCompleteStyle(string, specs) {
+    return [
+        createStyle("fg", specs.fg),
+        createStyle("bg", specs.bg),
+        createStyle("effects", specs.effects),
+        string.toString().replace(/\s*$/, ""),
+        specs.fg || specs.bg || specs.effects
+            ? createStyle("effects", "reset")
+            : "",
+    ].join("");
+}
 exports.colorize = (string, customStyle = {}) => {
-    if (typeof customStyle === "string" || typeof customStyle === "number") {
-        if (customStyle === "error" || customStyle === 3) {
-            return createDefault(string, "yellow", "red", "blink");
-        }
-        else if (customStyle === "warning" || customStyle === 2) {
-            return createDefault(string, "red", "", "underscore");
-        }
-        else if (customStyle === "log" || customStyle === 1) {
-            return createDefault(string, "cyan");
-        }
-        else {
-            return createDefault(string);
-        }
+    if (typeof customStyle === "string") {
+        const levelStyle = createLevelStyle(customStyle);
+        return createCompleteStyle(string, levelStyle);
     }
     else {
-        return [
-            createStyle("fg", customStyle.fg),
-            createStyle("bg", customStyle.bg),
-            createStyle("effects", customStyle.effects),
-            string.toString().replace(/\s*$/, ""),
-            customStyle.fg || customStyle.bg || customStyle.effects
-                ? createStyle("effects", "reset")
-                : "",
-        ].join("");
+        return createCompleteStyle(string, customStyle);
     }
 };
 //# sourceMappingURL=colorizeLog.js.map

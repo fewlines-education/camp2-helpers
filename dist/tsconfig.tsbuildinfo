@@ -130,15 +130,15 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "../expectmessage/utils/colorizelog.types.ts": {
-        "version": "7763fc6e01a1f5050860342966dbfd189de30b146d6ff3aae45d1e5bd8ee4760",
-        "signature": "460735fee87ce22155e40836d97d64c6fdda622c77d6dd69032a0eb54806bb5b"
+        "version": "05a38f01190e2e4cc6ec0fb86152811dffea85ce6ab79275a13983ee611f69c8",
+        "signature": "02b7418482478651c3b8f008f6d58f93ef45c6b996c8a522f7c16675c7357064"
       },
       "../expectmessage/utils/colorizelog.ts": {
-        "version": "b674cbebb3375747b501427e121ff2d78682b0b539e6ffe27a0fe988aa91be30",
+        "version": "9d6664587f018c6bfb2a1d48334e4039e75f1ec14f9c3305ab454780d8abe8a8",
         "signature": "8a13ad2c73e4c4924db876ee4a5cf52898f14c211b2e1ac3508675005fad85d3"
       },
       "../expectmessage/matchers.ts": {
-        "version": "fd6031c52d6b79ddc981589d66f15faa1785b0ba4eec3c484b09d739587bf341",
+        "version": "5407aed32cc21c83162282f4fbcb39aa382709b819420c3eadaccce5de815826",
         "signature": "91eb2806c691951507970c98092baf100e5d1c2a4aa760f3253c5675e29d8ac1"
       },
       "../expectmessage/expectmessage.ts": {
@@ -2083,6 +2083,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../astnodeparser/astnodeparser.types.ts": [
+        "../node_modules/ast-types/main.d.ts"
+      ],
       "../astnodeparser/astnodeparser.ts": [
         "../astnodeparser/astnodeparser.types.ts"
       ],
@@ -2746,9 +2749,6 @@
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../astnodeparser/astnodeparser.types.ts": [
-        "../node_modules/ast-types/main.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2804,6 +2804,9 @@
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",
       "../node_modules/recast/parsers/_babel_options.d.ts",
       "../node_modules/recast/parsers/typescript.d.ts",
+      "../astnodeparser/astnodeparser.types.ts",
+      "../astnodeparser/astnodeparser.ts",
+      "../index.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
@@ -2883,9 +2886,6 @@
       "../expectmessage/utils/colorizelog.types.ts",
       "../expectmessage/matchers.ts",
       "../expectmessage/utils/colorizelog.ts",
-      "../astnodeparser/astnodeparser.types.ts",
-      "../index.ts",
-      "../astnodeparser/astnodeparser.ts",
       "../expectmessage/expectmessage.ts"
     ]
   },
