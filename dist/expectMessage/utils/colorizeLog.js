@@ -54,11 +54,9 @@ function createCompleteStyle(string, specs) {
     ].join("");
 }
 exports.colorize = (string, customStyle = {}) => {
-    if (typeof customStyle === "string") {
-        return createCompleteStyle(string, createLevelStyle(customStyle));
-    }
-    else {
-        return createCompleteStyle(string, customStyle);
-    }
+    return createCompleteStyle(string, customStyle);
+};
+exports.customColorize = (string, customStyle) => {
+    return createCompleteStyle(string, createLevelStyle(customStyle));
 };
 //# sourceMappingURL=colorizeLog.js.map

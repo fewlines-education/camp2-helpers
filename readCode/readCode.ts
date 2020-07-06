@@ -7,13 +7,13 @@ export function readCode(path: string): Promise<string> {
         reject(err);
         return;
       }
-      const studentCode = text
+      const code = text
         .replace(/\/\*([^]*?)\*\//gm, "") // multiline comments
         .replace(/\/\/[^]*?\n/g, "") // single line comments
         .trim();
 
-      if (studentCode.length) {
-        resolve(studentCode);
+      if (code.length) {
+        resolve(code);
       } else {
         reject("File does not contain any code");
       }

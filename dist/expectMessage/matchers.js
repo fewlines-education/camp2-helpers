@@ -21,11 +21,20 @@ const wrapMatcher = (matcher, customMessage, customStyle = {}) => {
             }
             const { matcherResult } = error;
             if (typeof customMessage !== "string") {
-                console.log("been here");
                 throw new JestAssertionError(matcherResult, newMatcher);
             }
-            const message = () => colorizeLog_1.colorize(customMessage, customStyle) + "\n\n" + matcherResult.message();
-            throw new JestAssertionError(Object.assign(Object.assign({}, matcherResult), { message }), newMatcher);
+            if (typeof customStyle === "string") {
+                const message = () => colorizeLog_1.customColorize(customMessage, customStyle) +
+                    "\n\n" +
+                    matcherResult.message();
+                throw new JestAssertionError(Object.assign(Object.assign({}, matcherResult), { message }), newMatcher);
+            }
+            else {
+                const message = () => colorizeLog_1.colorize(customMessage, customStyle) +
+                    "\n\n" +
+                    matcherResult.message();
+                throw new JestAssertionError(Object.assign(Object.assign({}, matcherResult), { message }), newMatcher);
+            }
         }
     };
     return newMatcher;

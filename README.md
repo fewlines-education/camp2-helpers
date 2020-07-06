@@ -29,7 +29,7 @@ You need to install `jest` for `expect` to be a global variable.
 
 #### Reference
 
-The function `expectMessage(value, message, [style])` takes three arguments
+The function `expectMessage(value, message, style = {})` takes three arguments
 
 - `value`, the value tested against a matcher. It is the same argument referenced in the [Jest documentation](https://jestjs.io/docs/en/expect#expectvalue).
 - `message`, a **string** that is printed only if the expect fails.
@@ -91,7 +91,7 @@ The function `readCode(path)` takes a one argument and returns a promise with a 
 ```js
 import { readCode } from "camp2-helpers";
 
-const studentCode = await readCode("path/of/your/file"));
+const code = await readCode("path/of/your/file"));
 ```
 
 It can be used for testing with `jest` the following way.
@@ -110,7 +110,7 @@ beforeAll(() => {
   // Loads the student's code
   code = await readcode("./index.js");
 
-  return studentCode;
+  return code;
 });
 
 test("variable 'hello' contains 'Hello World!'", () => {

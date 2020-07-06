@@ -1,9 +1,4 @@
-import {
-  ObjectTerminalCustomStyle,
-  TerminalCustomStyle,
-  Styles,
-  Levels,
-} from "./colorizeLog.types";
+import { ObjectTerminalCustomStyle, Styles, Levels } from "./colorizeLog.types";
 
 const levels: Levels = {
   error: { fg: "yellow", bg: "red", effects: "blink" },
@@ -68,11 +63,11 @@ function createCompleteStyle(
 
 export const colorize = (
   string: string,
-  customStyle: TerminalCustomStyle = {}
+  customStyle: ObjectTerminalCustomStyle = {}
 ): string => {
-  if (typeof customStyle === "string") {
-    return createCompleteStyle(string, createLevelStyle(customStyle));
-  } else {
-    return createCompleteStyle(string, customStyle);
-  }
+  return createCompleteStyle(string, customStyle);
+};
+
+export const customColorize = (string: string, customStyle: string): string => {
+  return createCompleteStyle(string, createLevelStyle(customStyle));
 };

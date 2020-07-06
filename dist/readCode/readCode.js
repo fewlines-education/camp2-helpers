@@ -11,12 +11,12 @@ function readCode(path) {
                 reject(err);
                 return;
             }
-            const studentCode = text
+            const code = text
                 .replace(/\/\*([^]*?)\*\//gm, "")
                 .replace(/\/\/[^]*?\n/g, "")
                 .trim();
-            if (studentCode.length) {
-                resolve(studentCode);
+            if (code.length) {
+                resolve(code);
             }
             else {
                 reject("File does not contain any code");

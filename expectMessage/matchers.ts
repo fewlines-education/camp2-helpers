@@ -1,5 +1,5 @@
 import { TerminalCustomStyle } from "./utils/colorizeLog.types";
-import { colorize } from "./utils/colorizeLog";
+import { colorize, customColorize } from "./utils/colorizeLog";
 
 class JestAssertionError extends Error {
   matcherResult: any;
@@ -30,15 +30,23 @@ const wrapMatcher = (
       const { matcherResult } = error;
 
       if (typeof customMessage !== "string") {
-        console.log("been here");
-
         throw new JestAssertionError(matcherResult, newMatcher);
       }
+      if (typeof customStyle === "string") {
+        const message = (): string =>
+          customColorize(customMessage, customStyle) +
+          "\n\n" +
+          matcherResult.message();
 
-      const message = (): string =>
-        colorize(customMessage, customStyle) + "\n\n" + matcherResult.message();
+        throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+      } else {
+        const message = (): string =>
+          colorize(customMessage, customStyle) +
+          "\n\n" +
+          matcherResult.message();
 
-      throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+        throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+      }
     }
   };
   return newMatcher;
