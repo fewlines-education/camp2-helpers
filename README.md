@@ -34,6 +34,10 @@ The function `expectMessage(value, message, [style])` takes three arguments
 - `value`, the value tested against a matcher. It is the same argument referenced in the [Jest documentation](https://jestjs.io/docs/en/expect#expectvalue).
 - `message`, a **string** that is printed only if the expect fails.
 - `style`, either:
+  - a **string** either being "log", "warning", or "error". They represent default styles given to the messages.
+    - ![log](resources/level1_log.png)
+    - ![warning](resources/level2_warning.png)
+    - ![error](resources/level3_error.png)
   - an **object** composed of three strings changing respectively the _foreground color_, _background color_ and _effect_ of the message printed.
   ```ts
   {
@@ -42,7 +46,6 @@ The function `expectMessage(value, message, [style])` takes three arguments
     effects?: string;
   }
   ```
-  - `1`, `2`, or `3`. Each integer correspond to a level of visibility for the message, from the lowest to the most visible color schema.
 
 #### Example
 
