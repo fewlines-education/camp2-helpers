@@ -154,4 +154,4 @@ You can search by name, class member name (e.g. "constructor").
 To prevent breaking the tests in case of searching something that is not in the ast,
 the function returns "undefined".
 
-⚠️ This is a WIP, if you probably should investigate the ast if you can't find what you are looking for.
+⚠️ This is a WIP, if you probably should investigate the `ast` if you can't find what you are looking for.
