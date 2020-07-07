@@ -10,10 +10,6 @@ To install it, add this in your `package.json` file:
 }
 ```
 
-## Import
-
-To import the whole package, you can import it from the top of your file:
-
 ## Utility functions
 
 ### expectMessage
@@ -22,14 +18,14 @@ To import the whole package, you can import it from the top of your file:
 import { expectMessage } from "camp2-helpers";
 ```
 
-This function modifies the jest [expect](https://jestjs.io/docs/en/expect) function and wrap it in a custom package in order to give an extra option to add a message when jest tests fails in Typescript.
+This function modifies the jest [expect](https://jestjs.io/docs/en/expect) function and wrap it in a custom package in order to give an extra option to add a message when jest tests fails in TypeScript.
 It is based the package [jest-expect-message](https://www.npmjs.com/package/jest-expect-message) for custom use.
 
 You need to install `jest` for `expect` to be a global variable.
 
 #### Reference
 
-The function `expectMessage(value, message, style = {})` takes three arguments
+The function `expectMessage(value, message, style = {})` takes three arguments:
 
 - `value`, the value tested against a matcher. It is the same argument referenced in the [Jest documentation](https://jestjs.io/docs/en/expect#expectvalue).
 - `message`, a **string** that is printed only if the expect fails.
@@ -144,13 +140,13 @@ const code = await readCode("./path/to/file.ts");
 
 ```ts
 // Class node example
-const someClass = findNode(code, "someClass");
+const classNode = findNode(code, "classNode");
 ```
 
 - Search deeper into the node:
 
 ```ts
-const someProperty = findNode(someClass, "someProperty");
+const classProperty = findNode(classNode, "classProperty");
 ```
 
 You can search by name, class member name (e.g. "constructor").
