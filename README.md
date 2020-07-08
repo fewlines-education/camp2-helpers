@@ -6,7 +6,7 @@ To install it, add this in your `package.json` file:
 
 ```json
 "dependencies": {
-  "camp2-helpers": "fewlines-education/camp2-helpers#master"
+  "camp2-helpers": "fewlines-education/camp2-helpers#main"
 }
 ```
 
