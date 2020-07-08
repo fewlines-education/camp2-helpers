@@ -1,5 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const levels = {
+    error: { fg: "yellow", bg: "red", effects: "blink" },
+    warning: { fg: "red", effects: "underscore" },
+    log: { fg: "cyan" },
+};
 const styles = {
     effects: {
         reset: "0",
@@ -34,13 +39,24 @@ const styles = {
 const createStyle = (cat, styleName) => {
     return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
-exports.colorize = (string, customStyle = {}) => {
+const createLevelStyle = (cat) => {
+    return levels[cat] ? levels[cat] : levels.log;
+};
+function createCompleteStyle(string, specs) {
     return [
-        createStyle("fg", customStyle.fg),
-        createStyle("bg", customStyle.bg),
-        createStyle("effects", customStyle.effects),
+        createStyle("fg", specs.fg),
+        createStyle("bg", specs.bg),
+        createStyle("effects", specs.effects),
         string.toString().replace(/\s*$/, ""),
-        customStyle.fg || customStyle.bg || customStyle.effects ? createStyle("effects", "reset") : "",
+        specs.fg || specs.bg || specs.effects
+            ? createStyle("effects", "reset")
+            : "",
     ].join("");
+}
+exports.colorize = (string, customStyle = {}) => {
+    return createCompleteStyle(string, customStyle);
+};
+exports.defaultColorize = (string, customStyle) => {
+    return createCompleteStyle(string, createLevelStyle(customStyle));
 };
 //# sourceMappingURL=colorizeLog.js.map

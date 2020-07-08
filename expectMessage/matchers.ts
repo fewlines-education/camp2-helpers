@@ -1,4 +1,5 @@
-import { colorize, TerminalCustomStyle } from "./utils/colorizeLog";
+import { TerminalCustomStyle } from "./utils/colorizeLog.types";
+import { colorize, defaultColorize } from "./utils/colorizeLog";
 
 class JestAssertionError extends Error {
   matcherResult: any;
@@ -13,7 +14,11 @@ class JestAssertionError extends Error {
   }
 }
 
-const wrapMatcher = (matcher: any, customMessage: string, customStyle: TerminalCustomStyle = {}): any => {
+const wrapMatcher = (
+  matcher: any,
+  customMessage: string,
+  customStyle: TerminalCustomStyle = {}
+): any => {
   const newMatcher = (...args: any[]): any => {
     try {
       return matcher(...args);
@@ -25,20 +30,33 @@ const wrapMatcher = (matcher: any, customMessage: string, customStyle: TerminalC
       const { matcherResult } = error;
 
       if (typeof customMessage !== "string") {
-        console.log("been here");
-
         throw new JestAssertionError(matcherResult, newMatcher);
       }
+      if (typeof customStyle === "string") {
+        const message = (): string =>
+          defaultColorize(customMessage, customStyle) +
+          "\n\n" +
+          matcherResult.message();
 
-      const message = (): any => colorize(customMessage, customStyle) + "\n\n" + matcherResult.message();
+        throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+      } else {
+        const message = (): string =>
+          colorize(customMessage, customStyle) +
+          "\n\n" +
+          matcherResult.message();
 
-      throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+        throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
+      }
     }
   };
   return newMatcher;
 };
 
-const wrapMatchers = (matchers: any, customMessage: string, customStyle: TerminalCustomStyle = {}): any => {
+const wrapMatchers = (
+  matchers: any,
+  customMessage: string,
+  customStyle: TerminalCustomStyle = {}
+): any => {
   return Object.keys(matchers).reduce((acc, name) => {
     const matcher = matchers[name];
 
@@ -61,7 +79,7 @@ export default (expect: any): any => {
   let expectProxy = Object.assign(
     (actual: any, customMessage: string, customStyle: TerminalCustomStyle) =>
       wrapMatchers(expect(actual), customMessage, customStyle), // partially apply expect to get all matchers and chain them
-    expect, // clone additional properties on expect
+    expect // clone additional properties on expect
   );
 
   expectProxy.extend = (o: any): any => {

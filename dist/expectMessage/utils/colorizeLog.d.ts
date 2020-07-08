@@ -1,6 +1,3 @@
-export interface TerminalCustomStyle {
-    fg?: string;
-    bg?: string;
-    effects?: string;
-}
-export declare const colorize: (string: string, customStyle?: TerminalCustomStyle) => string;
+import { ObjectTerminalCustomStyle } from "./colorizeLog.types";
+export declare const colorize: (string: string, customStyle?: ObjectTerminalCustomStyle) => string;
+export declare const defaultColorize: (string: string, customStyle: string) => string;

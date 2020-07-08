@@ -1,14 +1,10 @@
-export interface TerminalCustomStyle {
-  fg?: string;
-  bg?: string;
-  effects?: string;
-}
+import { ObjectTerminalCustomStyle, Styles, Levels } from "./colorizeLog.types";
 
-interface Styles {
-  [key: string]: {
-    [key: string]: string;
-  };
-}
+const levels: Levels = {
+  error: { fg: "yellow", bg: "red", effects: "blink" },
+  warning: { fg: "red", effects: "underscore" },
+  log: { fg: "cyan" },
+};
 
 const styles: Styles = {
   effects: {
@@ -42,16 +38,39 @@ const styles: Styles = {
   },
 };
 
-const createStyle = (cat: any, styleName?: string): string => {
+const createStyle = (cat: string, styleName?: string): string => {
   return styleName ? `\x1b[${styles[cat][styleName.toLowerCase()]}m` : "";
 };
 
-export const colorize = (string: string, customStyle: TerminalCustomStyle = {}): string => {
+const createLevelStyle = (cat: string): any => {
+  return levels[cat] ? levels[cat] : levels.log;
+};
+
+function createCompleteStyle(
+  string: string,
+  specs: ObjectTerminalCustomStyle
+): string {
   return [
-    createStyle("fg", customStyle.fg),
-    createStyle("bg", customStyle.bg),
-    createStyle("effects", customStyle.effects),
+    createStyle("fg", specs.fg),
+    createStyle("bg", specs.bg),
+    createStyle("effects", specs.effects),
     string.toString().replace(/\s*$/, ""),
-    customStyle.fg || customStyle.bg || customStyle.effects ? createStyle("effects", "reset") : "",
+    specs.fg || specs.bg || specs.effects
+      ? createStyle("effects", "reset")
+      : "",
   ].join("");
+}
+
+export const colorize = (
+  string: string,
+  customStyle: ObjectTerminalCustomStyle = {}
+): string => {
+  return createCompleteStyle(string, customStyle);
+};
+
+export const defaultColorize = (
+  string: string,
+  customStyle: string
+): string => {
+  return createCompleteStyle(string, createLevelStyle(customStyle));
 };
