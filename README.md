@@ -25,7 +25,7 @@ You need to install `jest` for `expect` to be a global variable.
 
 #### Reference
 
-The function `expectMessage(value, message, style = {})` takes three arguments:
+The function `expectMessage(value, message, style)` takes three arguments:
 
 - `value`, the value tested against a matcher. It is the same argument referenced in the [Jest documentation](https://jestjs.io/docs/en/expect#expectvalue).
 - `message`, a **string** that is printed only if the expect fails.
@@ -48,7 +48,7 @@ The function `expectMessage(value, message, style = {})` takes three arguments:
 With pre-defined style:
 ```js
 test("simple test", () => {
-  expectMessage(1 + 1, "This is an error message", style="error").toBe(11);
+  expectMessage(1 + 1, "This is an error message", "error").toBe(11);
 });
 
 // This test will fail and print "This is an error message" in yellow with a red background.
@@ -57,7 +57,7 @@ test("simple test", () => {
 With your own style:
 ```js
 test("simple test", () => {
-  expectMessage(1 + 1, "This is my own error message", style={fg: "magenta", bg: "cyan", effects: "reverse"}).toBe(11);
+  expectMessage(1 + 1, "This is my own error message", {fg: "magenta", bg: "cyan", effects: "reverse"}).toBe(11);
 });
 
 // This test will fail and print "This my error message" in magenta with a cyan background and reverse !.
