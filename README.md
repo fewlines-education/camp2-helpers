@@ -87,7 +87,7 @@ The function `readCode(path)` takes a one argument and returns a promise with a 
 ```js
 import { readCode } from "camp2-helpers";
 
-const code = await readCode("path/of/your/file"));
+const code = await readCode("path/of/your/file");
 ```
 
 It can be used for testing with `jest` the following way.
@@ -99,7 +99,7 @@ const hello = "Hello World!";
 
 ```js
 // index.test.js
-const readcode = require("./readcode");
+const readcode = require("camp2-helpers");
 
 let code;
 beforeAll(() => {
