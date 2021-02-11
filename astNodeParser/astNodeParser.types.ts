@@ -34,4 +34,8 @@ export interface Node extends namedTypes.Node {
   async: boolean;
   params: Node[];
   value: Node;
+  superClass: Node;
+  returnType: {
+    typeAnnotation: Node;
+  } & Node;
 }
